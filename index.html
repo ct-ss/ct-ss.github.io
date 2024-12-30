@@ -60,6 +60,8 @@
         }
 
         .corner-image {
+            width: 150px; /* Normal boyut */
+            height: auto;
             position: fixed;
             bottom: 0; /* Aşağıdan sıfır boşluk */
             right: 0; /* Sağdan sıfır boşluk */
@@ -85,7 +87,7 @@
 
         .can-tuncer-link:hover {
             transform: scale(1.2); /* Hover efekti */
-        
+            transition: transform 0.3s ease;
         }
 
         .white {
@@ -134,6 +136,12 @@
             font-size: 2rem; /* Spotify ikonunun boyutu */
             color: #1DB954; /* Spotify yeşili */
         }
+
+        @media (max-width: 600px) {
+    .corner-image {
+        width: 75px; /* Küçük ekranlarda %50 küçültülmüş boyut */
+    }
+}
     </style>
 </head>
 <body>
