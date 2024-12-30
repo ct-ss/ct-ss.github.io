@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTSS</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: #00bf63;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #animation-container {
+            text-align: center;
+            font-size: 2rem;
+            padding: 0 20px; /* Sağdan ve soldan boşluk */
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+            display: none;
+            text-align: center;
+        }
+
+        .text-container a {
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .text-container a:hover {
+            transform: scale(1.1);
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .corner-image {
+            position: fixed;
+            bottom: 0; /* Aşağıdan sıfır boşluk */
+            right: 0; /* Sağdan sıfır boşluk */
+            width: 150px;
+            height: auto;
+            display: none; /* Başlangıçta gizli */
+        }
+
+        /* Can TUNCER linkini sol altta sabitlemek */
+        .can-tuncer-link {
+            position: fixed;
+            bottom: 0;
+            left: 0; /* Sol altta konumlandırdık */
+            font-size: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            color: white; /* Renk beyaz */
+            margin: 10px 20px; /* Alt ve solda biraz boşluk */
+            text-decoration: none; /* Link altını kaldır */
+            transition: transform 0.3s ease;
+            display: none; /* Başlangıçta gizle */
+        }
+
+        .can-tuncer-link:hover {
+            transform: scale(1.2); /* Hover efekti */
+        }
+
+        .can-tuncer-link span {
+            color: #00bf63; /* TUNCER kısmı için yeşil renk */
+        }
+
+        .white {
+            color: white;
+        }
+
+        .green {
+            color: #00bf63;
+        }
+
+        .pink {
+            color: #f75f99;
+        }
+
+        .text-container a:hover {
+            transform: scale(1.3);
+        }
+
+        /* "Our Services" başlığı için stil */
+        .services-title {
+            font-size: 3rem; /* Başlık biraz daha büyük */
+            color: white;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .coming-soon {
+            font-size: 0.9rem; /* Küçük yazı boyutu */
+            color: #b0b0b0; /* Soluk gri tonları */
+            display: block; /* Alt satıra taşıma */
+            margin-top: 5px; /* Üstten biraz boşluk */
+        }
+
+        /* Can Tuncer ve Resmin Ortaya Çıkma Efekti */
+        .appear {
+            opacity: 0;
+            animation: appear 2s forwards;
+        }
+
+        @keyframes appear {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="animation-container"></div>
+
+    <div class="text-container">
+        <div class="services-title">
+            <span style="color: white;">Our</span>
+            <span style="color: #00bf63;">Services</span>
+        </div>        
+        <a href="https://ctssaiassist.github.io/" target="_blank">
+            <span class="white">&lt;/&gt;</span> 
+            <span class="green" style="letter-spacing: -0.02em;">CT</span><span class="white" style="letter-spacing: -0.02em;">SS</span>
+            <span class="green">A</span><span class="white">I</span> Assist
+        </a>
+        <a href="https://ctssacademy.github.io/" target="_blank">
+            <span class="white">&lt;/&gt;</span> 
+            <span class="green" style="letter-spacing: -0.02em;">CT</span><span class="white" style="letter-spacing: -0.02em;">SS</span>
+            <span class="green"> Academy</span>
+        </a>
+        <a href="https://copcatan.github.io/" target="_blank">
+            <span style="color: #b0b0b0; transition: color 0.3s ease;" onmouseover="this.style.color='#f75f99'" onmouseout="this.style.color='#b0b0b0'">çöpçatan</span>
+            <span class="coming-soon" style="font-size: 0.9rem; color: #b0b0b0; display: block; margin-top: 5px;">(coming soon) (for now Ankara/TR only)</span> <!-- Coming soon eklemesi -->
+        </a>
+    </div>
+
+    <img src="assets/remvbg-me-removebg-preview.png" alt="Profil Fotoğrafı" class="corner-image appear">
+
+    <!-- "Can Tuncer" linkini sol altta ekledik -->
+    <a href="https://cantuncr.github.io/" target="_blank" class="can-tuncer-link appear">
+        Can <span>TUNCER</span>
+    </a>
+
+    <script>
+        const messages = [
+            "Welcome to <span class='green'>CT</span><span class='white'>SS</span>!",
+            "We are creating revolutionary projects in software, artificial intelligence, and education.",
+            "With <span class='green'>CT</span><span class='white'>SS</span> A<span class='white'>I</span> Assist, we automate business processes, increase efficiency, and rapidly boost sales!", 
+            "With <span class='green'>CT</span><span class='white'>SS</span> Academy, we teach a profession and craft from scratch in 6 months, while also raising awareness of current technologies in children at an early age, shaping the software developers of the future!"
+        ];
+
+        const animationContainer = document.getElementById('animation-container');
+        const textContainer = document.querySelector('.text-container');
+        const cornerImage = document.querySelector('.corner-image');
+        const canTuncerLink = document.querySelector('.can-tuncer-link');
+
+        let index = 0;
+
+        function showMessage() {
+            if (index < messages.length) {
+                const message = document.createElement('div');
+                message.innerHTML = messages[index]; // innerHTML kullanarak span etiketlerini dahil ediyoruz
+                message.classList.add('fade-in');
+                animationContainer.appendChild(message);
+
+                setTimeout(() => {
+                    animationContainer.removeChild(message);
+                    index++;
+                    showMessage();
+                }, 2500); // Her yazı 2.5 saniye boyunca görünsün
+            } else {
+                animationContainer.style.display = 'none';
+                textContainer.style.display = 'flex';
+                cornerImage.style.display = 'block'; // Resmi göster
+                
+                // Animasyon bitince "Can Tuncer" linkini göster
+                canTuncerLink.style.display = 'block';
+            }
+        }
+
+        showMessage();
+    </script>
+</body>
+</html>
