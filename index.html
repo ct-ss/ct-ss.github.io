@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Can Tuncer Software Solutions</title>
+    <title>CTSS</title>
     <link href="assets/favicon.png" rel="icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <!-- Spotify Ikonu İçin FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -27,7 +26,7 @@
         #animation-container {
             text-align: center;
             font-size: 2rem;
-            padding: 0 20px; /* Sağdan ve soldan boşluk */
+            padding: 0 20px;
         }
 
         .text-container {
@@ -61,33 +60,32 @@
         }
 
         .corner-image {
-            width: 150px; /* Normal boyut */
-            height: auto;
-            position: fixed;
-            bottom: 0; /* Aşağıdan sıfır boşluk */
-            right: 0; /* Sağdan sıfır boşluk */
             width: 150px;
             height: auto;
-            display: none; /* Başlangıçta gizli */
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 150px;
+            height: auto;
+            display: none;
         }
 
-        /* Can TUNCER linkini sol altta sabitlemek */
         .can-tuncer-link {
             position: fixed;
             bottom: 0;
-            left: 0; /* Sol altta konumlandırdık */
+            left: 0;
             font-size: 1.5rem;
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
-            color: white; /* Renk beyaz */
-            margin: 10px 20px; /* Alt ve solda biraz boşluk */
-            text-decoration: none; /* Link altını kaldır */
-            display: none; /* Başlangıçta gizle */
+            color: white;
+            margin: 10px 20px;
+            text-decoration: none;
+            display: none;
             transition: transform 0.3s ease, color 0.3s ease;
         }
 
         .can-tuncer-link:hover {
-            transform: scale(1.2); /* Hover efekti */
+            transform: scale(1.2);
             transition: transform 0.3s ease;
         }
 
@@ -103,46 +101,102 @@
             color: #f75f99;
         }
 
-        /* "Our Services" başlığı için stil */
+        /* --- "Our Services" BAŞLIĞI DEĞİŞTİ --- */
         .services-title {
-            font-size: 3rem; /* Başlık biraz daha büyük */
+            font-size: 3rem; 
             color: white;
             margin-bottom: 20px;
-            font-weight: normal;
+            font-weight: bold; /* Logo olduğu için bold yaptık */
         }
 
         .coming-soon {
-            font-size: 0.9rem; /* Küçük yazı boyutu */
-            color: #b0b0b0; /* Soluk gri tonları */
-            display: block; /* Alt satıra taşıma */
-            margin-top: 5px; /* Üstten biraz boşluk */
+            font-size: 0.9rem;
+            color: #b0b0b0;
+            display: block;
+            margin-top: 5px;
         }
 
-        /* Podcast kısmı için stil */
         .podcast-link {
             font-size: 1.5rem;
             color: white;
             text-decoration: none;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
             transition: color 0.3s ease;
         }
 
         .podcast-link:hover {
-            color: #1DB954; /* Spotify yeşili hover efekti */
+            color: #1DB954;
         }
 
         .spotify-icon {
-            font-size: 2rem; /* Spotify ikonunun boyutu */
-            color: #1DB954; /* Spotify yeşili */
+            font-size: 2rem;
+            color: #1DB954;
         }
 
+        .ebook-btn {
+            color: #FF8C00; 
+            font-size: 1.2rem; 
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex; 
+            align-items: center;
+            justify-content: center;
+            gap: 10px; 
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ebook-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .ebook-icon {
+            font-size: 2rem; 
+            color: #FF8C00;
+        }
+
+        /* --- AdParcel STİLLERİ GÜNCELLENDİ (DAHA BÜYÜK VE HEYECANLI) --- */
+        .pulse {
+            animation: pulse 1.2s infinite; /* Hızlandırıldı */
+            font-size: 3.5rem; /* Büyütüldü */
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.15); opacity: 0.7; } /* Daha çok zıplasın */
+            100% { transform: scale(1); opacity: 1; }
+        }
+        /* --- STİL GÜNCELLEME SONU --- */
+
+
         @media (max-width: 600px) {
-    .corner-image {
-        width: 75px; /* Küçük ekranlarda %50 küçültülmüş boyut */
-    }
-}
+            .corner-image {
+                width: 75px;
+            }
+            .ebook-btn {
+                font-size: 1rem;
+            }
+            .ebook-icon, .spotify-icon {
+                font-size: 1.5rem; 
+            }
+            .pulse {
+                font-size: 2.5rem; /* Mobil için de büyütüldü */
+            }
+            .text-container a {
+                font-size: 1.2rem;
+            }
+            .services-title {
+                font-size: 2.5rem; /* Mobil için logo boyutu */
+            }
+        }
     </style>
 </head>
 <body>
@@ -150,43 +204,41 @@
 
     <div class="text-container">
         <div class="services-title">
-            <span style="color: white;">Our</span>
-            <span style="color: #00bf63;">Services</span>
+            <span style="color: white;">&lt;/&gt;</span> 
+            <span style="color: #00bf63;">CT</span><span style="color: white;">SS</span>
         </div>        
-        <a href="https://ctssaiassist.github.io/" target="_blank">
-            <span class="white">&lt;/&gt;</span> 
-            <span class="green" style="letter-spacing: -0.02em;">CT</span><span class="white" style="letter-spacing: -0.02em;">SS</span>
-            <span class="green">A</span><span class="white">I</span> Assist
+        <a href="https://project-adparcel.github.io/" target="_blank" class="pulse">
+            <span class="green">Ad</span><span class="white">Parcel</span>
         </a>
+
         <a href="https://ctssacademy.github.io/" target="_blank">
-            <span class="white">&lt;/&gt;</span> 
+            <span class="white"></></span> 
             <span class="green" style="letter-spacing: -0.02em;">CT</span><span class="white" style="letter-spacing: -0.02em;">SS</span>
             <span class="green"> Academy</span>
         </a>
-        <a href="https://project-adparcel.github.io/" target="_blank">
-            <span style="color: #b0b0b0; transition: color 0.3s ease;" onmouseover="this.style.color='#00bf63'" onmouseout="this.style.color='#b0b0b0'">CTSS Creators HUB</span>
-            <span class="coming-soon" style="font-size: 0.9rem; color: #b0b0b0; display: block; margin-top: 5px;">(coming soon)</span> <!-- Coming soon eklemesi -->
+
+        <a href="https://ctssaiassist.github.io/" target="_blank">
+            <span class="white"></></span> 
+            <span class="green" style="letter-spacing: -0.02em;">CT</span><span class="white" style="letter-spacing: -0.02em;">SS</span>
+            <span class="green">A</span><span class="white">I</span> Assist
         </a>
-        <a href="https://project-adparcel.github.io/" target="_blank">
-            <span style="color: #b0b0b0; transition: color 0.3s ease;" onmouseover="this.style.color='#00bf63'" onmouseout="this.style.color='#b0b0b0'">AdParcel</span>
-            <span class="coming-soon" style="font-size: 0.9rem; color: #b0b0b0; display: block; margin-top: 5px;">(coming soon)</span> <!-- Coming soon eklemesi -->
-        </a>
-  
+        
         <a href="https://copcatan.github.io/" target="_blank">
-            <span style="color: #b0b0b0; transition: color 0.3s ease;" onmouseover="this.style.color='#f75f99'" onmouseout="this.style.color='#b0b0b0'">çöpçatan</span>
-            <span class="coming-soon" style="font-size: 0.9rem; color: #b0b0b0; display: block; margin-top: 5px;">(coming soon) (for now Ankara/TR only)</span> <!-- Coming soon eklemesi -->
+            <span style="color: #f75f99;">çöpçatan</span>
+            <span class="coming-soon">(for now Ankara/TR only)</span>
         </a>
 
-        <!-- Podcast Linki ve Spotify İkonu -->
         <a href="https://open.spotify.com/show/0jLBnYYl9r2v9BQrmjVDeU?si=10cdaa7bce21464e" target="_blank" class="podcast-link">
-            <i class="fab fa-spotify spotify-icon" style="font-size: 18px; margin-right: 10px;"></i> Check out our podcast
+            <i class="fab fa-spotify spotify-icon"></i> Check out our podcast
+        </a>
+
+        <a href="https://testingin1day.com/" target="_blank" class="ebook-btn">
+            <i class="fas fa-book ebook-icon"></i> Check out our book
         </a>
         
     </div>
-
     <img src="assets/remvbg-me-removebg-preview.png" alt="Profil Fotoğrafı" class="corner-image">
 
-    <!-- "Can Tuncer" linkini sol altta ekledik -->
     <a href="https://cantuncr.github.io/" target="_blank" class="can-tuncer-link" style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif; font-weight: bold; color: white; text-decoration: none; display: inline-block; opacity: 0; transition: opacity 1s ease;">
         <span style="color: white;">Can</span> <span style="color: #00bf63;">TUNCER</span>
     </a>
@@ -196,7 +248,8 @@
             "Welcome to <span class='green'>CT</span><span class='white'>SS</span>!",
             "We are creating revolutionary projects in software, artificial intelligence, and education.",
             "With <span class='green'>CT</span><span class='white'>SS</span> A<span class='white'>I</span> Assist, we automate business processes, increase efficiency, and rapidly boost sales!", 
-            "With <span class='green'>CT</span><span class='white'>SS</span> Academy, we teach a profession and craft from scratch in 6 months, while also raising awareness of current technologies in children at an early age, shaping the software developers of the future!"
+            "With <span class='green'>CT</span><span class='white'>SS</span> Academy, we teach a profession and craft from scratch in 6 months, while also raising awareness of current technologies in children at an early age, shaping the software developers of the future!",
+            "And... we expose your advertisement forever. Moreover, we allow you to resell this space. <span class='green'>Ad</span><span class='white'>Parcel</span>: Pay Once Advertise Forever!"
         ];
 
         const animationContainer = document.getElementById('animation-container');
@@ -205,37 +258,36 @@
         const canTuncerLink = document.querySelector('.can-tuncer-link');
 
         let index = 0;
+        
+        const totalAnimationTime = (messages.length * 2500) + 500; 
 
         function showMessage() {
             if (index < messages.length) {
                 const message = document.createElement('div');
-                message.innerHTML = messages[index]; // innerHTML kullanarak span etiketlerini dahil ediyoruz
+                message.innerHTML = messages[index];
                 message.classList.add('fade-in');
                 animationContainer.appendChild(message);
 
                 setTimeout(() => {
-                    animationContainer.removeChild(message);
+                    if (animationContainer.contains(message)) {
+                        animationContainer.removeChild(message);
+                    }
                     index++;
                     showMessage();
-                }, 2500); // Her yazı 2.5 saniye boyunca görünsün
+                }, 2500);
             } else {
                 animationContainer.style.display = 'none';
                 textContainer.style.display = 'flex';
-                cornerImage.style.display = 'block'; // Resmi göster
-                
-                // Animasyon bitince "Can Tuncer" linkini görünür yapıyoruz
-                setTimeout(() => {
-                    canTuncerLink.style.display = 'block'; // "Can Tuncer" linkini görünür yap
-                }, 500); // 0.5 saniye sonra
+                cornerImage.style.display = 'block'; 
             }
         }
 
         showMessage();
 
         setTimeout(() => {
-    canTuncerLink.style.display = 'block'; // "Can Tuncer" linkini göster
-    canTuncerLink.style.opacity = '1'; // Yavaşça opaklıkla göster
-}, 10000); // 6 saniye sonra animasyon bitiminde
+            canTuncerLink.style.display = 'block'; 
+            canTuncerLink.style.opacity = '1';
+        }, totalAnimationTime);
     </script>
 </body>
 </html>
